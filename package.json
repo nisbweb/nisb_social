@@ -1,0 +1,35 @@
+{
+  "name": "nisb_social",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "clean": "shx rm -r ./dist ./.parcel-cache ./.cache",
+    "build:css": "tailwindcss -i src/assets/style/main.css -o src/assets/style/tailwind.css -c ./tailwind.config.js",
+    "watch:pug": "parcel src/*.pug",
+    "build:pug": "parcel build src/*.pug",
+    "dev": "npm-run-all -p \"build:css -- --watch\" \"watch:pug\"",
+    "build": "NODE_ENV=production npm-run-all -s \"build:css -- --minify\" build:pug  && ./post_build_script.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nisbweb/nisb_social.git"
+  },
+  "author": "Shreesh Kulkarni <sgkul2000@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nisbweb/nisb_social/issues"
+  },
+  "homepage": "https://github.com/nisbweb/nisb_social#readme",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-nightly.2384",
+    "@parcel/transformer-pug": "^2.0.0-beta.3.1",
+    "autoprefixer": "^10.2.6",
+    "eslint": "^7.30.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-beta.3.1",
+    "pug": "^3.0.2",
+    "shx": "^0.3.3",
+    "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {}
+}
