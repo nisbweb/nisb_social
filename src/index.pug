@@ -6,8 +6,17 @@ html(lang="en" class="dark")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     meta(name="description" content="NISB Social Page")
     meta(name="author" content="Shreesh Kulkarni")
-    link(rel="icon" type="image/x-icon" href="./assets/favicon.ico")
+    link(rel="icon" type="image/x-icon" href="./assets/NISB_logo.png")
     link(rel="stylesheet" href="./assets/style/tailwind.css")
 
-  body.antialiased.relative.text-white(class="")
-    footer.text-center.my-4 Made with ❤️ by Tean NISB
+  include data
+  
+  body.antialiased.relative.text-white(class="bg-black m-0 p-0 min-h-screen flex flex-col justify-between items-center text-white")
+    section#main(class="flex flex-col items-center mt-20 w-8/12 lg:w-3/12")
+      img(src="./assets/images/Condensed---Black-Circle.png", alt="" class="w-32 mb-8")
+      h1(class="font-bold font-sans mb-10") NIE IEEE STUDENT BRANCH
+      div#links(class="flex flex-col items-stretch justify-center w-full")
+        each value in links
+          div.link(class="text-center my-3 py-4 rounded-lg bg-gray-50 text-gray-800 font-bold cursor-pointer w-full transform hover:-translate-y-1 transition-all duration-200 ease-in-out")= value.name
+
+    footer.text-center.my-4 Made with 🧠&nbsp; by Team NISB
