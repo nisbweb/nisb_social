@@ -12,11 +12,13 @@ html(lang="en" class="dark")
   include data
   
   body.antialiased.relative.text-white(class="bg-black m-0 p-0 min-h-screen flex flex-col justify-between items-center text-white")
-    section#main(class="flex flex-col items-center mt-20 w-8/12 lg:w-3/12")
+    div.inner
+    include components/circuit
+    section#main(class="flex flex-col items-center mt-20 w-8/12 lg:w-3/12 z-50")
       img(src="./assets/images/Condensed---Black-Circle.png", alt="" class="w-32 mb-8")
       h1(class="font-bold font-sans mb-10") NIE IEEE STUDENT BRANCH
       div#links(class="flex flex-col items-stretch justify-center w-full")
         each value in links
           div.link(class="text-center my-3 py-4 rounded-lg bg-gray-50 text-gray-800 font-bold cursor-pointer w-full transform hover:-translate-y-1 transition-all duration-200 ease-in-out")= value.name
 
-    footer.text-center.my-4 Made with 🧠&nbsp; by Team NISB
+    footer.text-center.my-4.z-50 Made with 🧠&nbsp; by Team NISB
