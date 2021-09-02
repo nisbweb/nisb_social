@@ -7,8 +7,10 @@
     "build:css": "tailwindcss -i src/assets/style/main.css -o src/assets/style/tailwind.css -c ./tailwind.config.js",
     "watch:pug": "parcel src/*.pug",
     "build:pug": "parcel build src/*.pug",
+    "pre-build": "./pre_build_script.sh",
+    "post-build": "./post_build_script.sh",
     "dev": "npm-run-all -p \"build:css -- --watch\" \"watch:pug\"",
-    "build": "NODE_ENV=production npm-run-all -s \"build:css -- --minify\" build:pug  && ./post_build_script.sh"
+    "build": "NODE_ENV=production npm-run-all -s pre-build \"build:css -- --minify\" build:pug post-build"
   },
   "repository": {
     "type": "git",
