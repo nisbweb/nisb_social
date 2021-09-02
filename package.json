@@ -31,5 +31,7 @@
     "shx": "^0.3.3",
     "tailwindcss": "^2.2.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "firebase": "^9.0.1"
+  }
 }

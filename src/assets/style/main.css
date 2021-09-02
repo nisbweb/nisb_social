@@ -3,22 +3,26 @@
 @tailwind utilities;
 
 .link:hover {
-  filter: drop-shadow(0px 0.25rem 8px #fff);
+  /* filter: drop-shadow(0px 0.25rem 8px #fff); */
 }
 
 body {
   background-color: #fff;
 }
 
+button.link {
+  transition: filter 0.1s linear, transform 0.1s ease-in-out;
+}
+
 div.inner {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   box-shadow: inset 0 0 700px #000;
   overflow: hidden;
-  z-index: 9;
+  z-index: 0;
 }
 
 svg#circuit {
@@ -27,7 +31,8 @@ svg#circuit {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #111;
-  opacity: 0.6;
+  opacity: 0.5;
+  z-index: -1;
 }
 .path {
   animation: draw 20s infinite;
