@@ -1,7 +1,13 @@
 /* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import { initializeApp } from "firebase/app"
-import { getFirestore, doc, collection, addDoc } from "firebase/firestore"
+import {
+	getFirestore,
+	collection,
+	addDoc,
+	increment,
+	updateDoc,
+	doc,
+} from "firebase/firestore"
 
 // import { getAnalytics } from "firebase/analytics"
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -33,6 +39,11 @@ const OpenLink = (e) => {
 		link: e.target.getAttribute("data-url"),
 		time: new Date(),
 		loc: location,
+	})
+
+	let linkDoc = doc(db, "social-links", e.target.getAttribute("data-id"))
+	updateDoc(linkDoc, {
+		count: increment(1),
 	})
 	window.open(e.target.getAttribute("data-url"), "_blank")
 }
