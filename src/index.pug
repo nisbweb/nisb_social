@@ -13,11 +13,12 @@ html(lang="en" class="dark")
   include data
   
   body.antialiased.relative.text-white(class="bg-black m-0 p-0 min-h-screen flex flex-col justify-between items-center text-white")
-    div.inner
-    include components/circuit
+    //- div.inner
+    //- include components/circuit
     section#main(class="flex flex-col items-center mt-10 lg:mt-16 w-full z-50")
       img(src="./assets/images/Condensed---Black-Circle.png", alt="" class="w-20 lg:w-32 mb-6 lg:mb-8")
-      h1(class="font-bold font-sans mb-4 lg:mb-10 text-center text-lg lg:text-2xl") NIE IEEE STUDENT BRANCH
+      h1(class="font-bold font-sans text-center text-lg lg:text-2xl") NISB COMPUTER SOCIETY
+      h3(class="font-bold font-sans mb-4 lg:mb-10 text-center text-lg lg:text-2xl") presents RUBIX 2023
       div#links(class="flex flex-col items-stretch justify-center w-10/12 lg:w-3/12")
         each value in links
           button.link(data-url = value.link data-name = value.name data-id = value.id class="text-center my-2 lg:my-3 py-3 lg:py-4 rounded-lg bg-gray-50 text-gray-800 font-bold text-sm lg:text-base cursor-pointer w-full transform hover:-translate-y-1 flex items-center justify-center")
