@@ -6,12 +6,24 @@
   /* filter: drop-shadow(0px 0.25rem 8px #fff); */
 }
 
+.custom-gradient {
+  background: linear-gradient(to right, #06ab8c, #02ae5c, #53ba69);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+
 body {
   background-color: #fff;
 }
 
 button.link {
   transition: filter 0.1s linear, transform 0.1s ease-in-out;
+}
+
+button.link:hover {
+  background: linear-gradient(to right, #06ab8c, #02ae5c, #53ba69);
+  color: white;
 }
 
 div.inner {
