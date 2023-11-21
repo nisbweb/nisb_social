@@ -38,13 +38,13 @@ div.inner {
 }
 
 svg#circuit {
-  position: fixed;
+  position: fixed !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #111;
   opacity: 0.5;
-  z-index: -1;
+  z-index: -99999;
 }
 .path {
   animation: draw 20s infinite;
