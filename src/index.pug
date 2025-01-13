@@ -22,7 +22,7 @@ html(lang="en" class="dark")
       //- h1(class="font-bold font-sans text-center text-lg lg:text-2xl custom-gradient") ANKURA'23
       div#links(class="flex flex-col items-stretch justify-center w-10/12 lg:w-3/12")
         each value in links
-          a.link(href = value.link target="_blank" data-name = value.name data-id = value.id class="text-center my-2 lg:my-3 py-3 lg:py-4 rounded-lg bg-gray-50 text-gray-800 font-bold text-sm lg:text-base cursor-pointer w-full transform hover:-translate-y-1 flex items-center justify-center")
+          a.link(href = value.link target="_blank" data-name = value.name data-id = value.id class="block text-center my-2 lg:my-3 py-3 lg:py-4 rounded-lg bg-gray-50 text-gray-800 font-bold text-sm lg:text-base cursor-pointer w-full transform hover:-translate-y-1 flex items-center justify-center")
             box-icon(type = value.type name = value.icon)
             span.ml-3= value.name
 
