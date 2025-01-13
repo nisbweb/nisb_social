@@ -17,11 +17,11 @@ body {
   background-color: #fff;
 }
 
-a.link {
+button.link {
   transition: filter 0.1s linear, transform 0.1s ease-in-out;
 }
 
-a.link:hover {
+button.link:hover {
   background: linear-gradient(to right, #06ab8c, #02ae5c, #53ba69);
   color: white;
 }
